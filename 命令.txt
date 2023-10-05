@@ -1,0 +1,39 @@
+使用以下命令生成 SSH Key：
+ssh-keygen -t rsa -C "youremail@example.com"
+接下来复制key，并且将该有的key粘贴到云端上，进行连接
+
+
+接下来，在本地创建库和库中的一些基本文件
+git init                                  # 初始化
+git add README.md                         # 添加文件
+
+配置config信息
+git config user.email "2663972773@qq.com"
+git config user.name "yuzhang1895"
+
+提交并连接本地库和远程库
+
+git commit -m "添加 README.md 文件"        # 提交并备注信息
+
+git remote add origin git@github.com:yuzhang1895/runoot-git-test.git
+git push -u origin master
+#提交完了第一步内容
+
+
+
+检测当前分支：
+git remote
+git remote -v
+
+
+
+获取远程分支，并覆盖本地分支
+git fetch origin
+git merge origin/master
+
+
+
+从本地分支提交到远程分支
+git add runoob-test.txt
+git commit -m "添加到远程"
+git push origin master
